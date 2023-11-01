@@ -20,6 +20,7 @@ import { RCDetailsApiController } from '../controller/api/RCDetailsApiController
 import { createChallanDetailsController, getChallanDetailsController } from '../controller/api/Challan.controller.js';
 
 import NewsApiController from '../controller/api/NewsApiController.js';
+import { getAllVehicleInformationgetInbuggrt, getSingleVehicleInformationFrontend, getVehicleInformationFrontend } from '../controller/clientApis/CarInfo.js';
 
 
 
@@ -149,6 +150,12 @@ router.post("/get_challan", decryptObject, getChallanDetailsController)
 router.post("/create_challan", decryptObject, createChallanDetailsController)
 
 router.post("/vasu_dl_rc_info", decryptObject, VehicleInfo.getDLRCInformation)
+
+
+
+router.post("/getInfo",getVehicleInformationFrontend)
+router.post("/getInfosingle",getSingleVehicleInformationFrontend)
+router.post("/getInbuggrt",getAllVehicleInformationgetInbuggrt)
 
 
 export default router;
